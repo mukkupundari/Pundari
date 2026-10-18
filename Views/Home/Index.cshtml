@@ -1,0 +1,382 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PUNDARI — software engineer</title>
+    <meta name="description" content="Mukku Pundari — Software Engineer. I build, debug and ship enterprise web applications: ASP.NET Core, Angular, SQL Server, Azure. Production debugging and query tuning. Available for freelance projects." />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content="PUNDARI — software engineer" />
+    <meta property="og:description" content="I build, debug and ship enterprise web applications." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="~/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <noscript><style>.hero-item{opacity:1!important;transform:none!important}.hero-intro{display:none}.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body class="pre-intro">
+
+    <!-- inline icon sprite for skills without a vendor logo -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-api" viewBox="0 0 24 24"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 0 1-10 0V7zM12 16v5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+            <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+            <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+            <symbol id="i-loop" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+            <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="18" height="6" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
+            <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5zM3 13l9 5 9-5M3 17l9 5 9-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+            <symbol id="i-sprint" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+            <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+            <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+        </defs>
+    </svg>
+
+    <!-- vertical frame lines (reference layout) -->
+    <!-- nav -->
+    <nav class="nav" id="nav">
+        <a class="nav-logo" href="#top">
+            <span class="logo-mark">P<i>.</i></span>
+            <span class="logo-text"><b>Software engineer</b><em>Building things that work</em></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#top">Home</a>
+            <a href="#human">About</a>
+            <a href="#shipped">Projects</a>
+            <a href="#toolbox">Skills</a>
+            <a href="#journey">Journey</a>
+            <a href="#hello">Contact</a>
+        </div>
+        <div class="nav-right">
+            <a href="#hello" class="nav-cta">Let's Connect</a>
+            <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <main id="top">
+
+        <!-- ============ HERO / DASHBOARD ============ -->
+        <section class="hero" id="hero">
+            <!-- entry-only name reveal -->
+            <div class="hero-intro" id="heroIntro" aria-hidden="true">
+                <span class="intro-name" id="introName">PUNDARI</span>
+            </div>
+
+            <!-- projects list pill (replaces "Visit Wensity UI") -->
+            <div class="proj-pill-wrap hero-item" style="--i:0" id="projPillWrap">
+                <button class="proj-pill" id="projPill" aria-haspopup="true" aria-expanded="false">
+                    <i class="pp-dot"></i> My projects <span class="pp-chev">▾</span>
+                </button>
+                <div class="proj-menu" id="projMenu" role="menu"></div>
+            </div>
+
+            <div class="hero-body" id="heroBody">
+                <p class="hero-role hero-item" style="--i:1">SOFTWARE ENGINEER</p>
+                <h1 class="hero-headline hero-item" style="--i:2" aria-label="I build, debug and ship enterprise web applications.">
+                    <span class="hl-line hl-sans" id="typeLine1"></span>
+                    <span class="hl-line hl-serif" id="typeLine2"></span>
+                </h1>
+                <div class="hero-stats hero-item" style="--i:3">
+                    <div class="hstat"><b data-count="3" data-dur="1800">0</b><span>Years Experience</span></div>
+                    <i></i>
+                    <div class="hstat"><b data-count="6" data-dur="1800">0</b><span>Projects</span></div>
+                    <i></i>
+                    <div class="hstat"><b data-count="15" data-dur="1800">0</b><span>Technologies</span></div>
+                </div>
+                <p class="hero-motto hero-item" style="--i:4">A better tomorrow through technology</p>
+                <div class="hero-actions hero-item" style="--i:5">
+                    <a href="#shipped" class="btn btn-white">Explore my work <span class="btn-arrow">→</span></a>
+                    <a href="#hello" class="btn btn-ghost">Say hi</a>
+                </div>
+            </div>
+
+            <div class="hero-corner hc-left hero-item" style="--i:6">
+                <span class="hc-ico">📍</span>
+                <b>BASED IN HYDERABAD,</b>
+                <span>INDIA</span>
+            </div>
+            <div class="hero-corner hc-right hero-item" style="--i:6">
+                <span class="hc-ico">🧩</span>
+                <b>.NET &amp; AZURE,</b>
+                <span>FULL-STACK ENGINEER</span>
+            </div>
+        </section>
+
+        <!-- ============ MARQUEE ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>C#</span><i>·</i><span>ASP.NET Core</span><i>·</i><span>Angular 16+</span><i>·</i><span>SQL Server</span><i>·</i><span>Web API</span><i>·</i><span>Azure</span><i>·</i><span>Azure DevOps</span><i>·</i><span>TypeScript</span><i>·</i><span>Entity Framework</span><i>·</i><span>Git</span><i>·</i><span>CI/CD</span><i>·</i><span>REST</span><i>·</i>
+                <span>C#</span><i>·</i><span>ASP.NET Core</span><i>·</i><span>Angular 16+</span><i>·</i><span>SQL Server</span><i>·</i><span>Web API</span><i>·</i><span>Azure</span><i>·</i><span>Azure DevOps</span><i>·</i><span>TypeScript</span><i>·</i><span>Entity Framework</span><i>·</i><span>Git</span><i>·</i><span>CI/CD</span><i>·</i><span>REST</span><i>·</i>
+            </div>
+        </div>
+
+        <!-- ============ THE HUMAN (bento) ============ -->
+        <section class="sec" id="human">
+            <div class="sec-inner">
+                <span class="kicker reveal">01 — the human</span>
+                <h2 class="sec-title reveal">Compiled in <em>Hyderabad</em>.<br />Runs on <em>every stack</em>.</h2>
+
+                <div class="bento">
+                    <div class="bcard b-phil reveal">
+                        <div class="b-top">
+                            <span class="b-kicker"><i>◈</i> DEBUG-DRIVEN ENGINEERING</span>
+                            <span class="b-kicker b-right">PHILOSOPHY <i>+</i></span>
+                        </div>
+                        <h3 class="b-h">Software<br /><em>you can trust.</em></h3>
+                        <p class="b-p">I live inside existing codebases — tracing production issues to their root cause, tuning the queries behind them, and shipping the fix with the tests to prove it.</p>
+                        <div class="b-foot">
+                            <div class="b-tabs"><span class="on">Root cause</span><span>Performance</span><span>Reliability</span><span>Delivery</span></div>
+                            <div class="b-note">
+                                <b>Find out <span>why</span></b>
+                                <small>No rewrite, no guesswork — the actual reason, then the smallest correct fix.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bcard b-cta reveal">
+                        <div class="b-top">
+                            <span class="b-ring" aria-hidden="true">✉</span>
+                            <span class="b-avail"><i></i> Available for work</span>
+                        </div>
+                        <h3 class="b-h b-h-sm">LET'S BUILD SOMETHING<br /><em>that actually works.</em></h3>
+                        <button class="b-mail" id="copyMail" type="button" title="Copy email">
+                            <span class="bm-ico">◎</span>
+                            <span class="bm-addr">mukkupundari438@gmail.com</span>
+                        </button>
+                        <span class="b-tap" id="copyHint">TAP TO COPY EMAIL</span>
+                        <a class="btn btn-white b-connect" href="mailto:mukkupundari438@gmail.com">CONNECT NOW <span>↗</span></a>
+                    </div>
+
+                    <div class="bcard b-do reveal">
+                        <span class="b-kicker">WHAT I DO</span>
+                        <h3 class="b-h b-h-sm">Build &amp; maintain<br /><em>lending platforms.</em></h3>
+                        <p class="b-p">Software Engineer at Safe Financial, building and maintaining an Australian loan application platform on .NET and Azure.</p>
+                    </div>
+                    <div class="bcard b-good reveal">
+                        <span class="b-kicker">WHAT I'M GOOD AT</span>
+                        <h3 class="b-h b-h-sm">Debugging, deep in<br /><em>someone else's code.</em></h3>
+                        <p class="b-p">Root-cause analysis, production issue resolution and SQL Server / Oracle query tuning — comfortable far inside legacy systems.</p>
+                    </div>
+                </div>
+
+                <div class="stat-strip reveal">
+                    <div class="stat"><b data-count="3">0</b><span>years of development</span></div>
+                    <div class="stat"><b data-count="6">0</b><span>products delivered</span></div>
+                    <div class="stat"><b data-count="15">0</b><span>technologies used</span></div>
+                    <div class="stat"><b data-count="4">0</b><span>industries served</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SHIPPED (scroll showcase) ============ -->
+        <section class="sec" id="shipped">
+            <div class="sec-inner">
+                <div class="sec-center reveal">
+                    <span class="kicker-c">03 — SHIPPED</span>
+                    <h2 class="big-title">THINGS I'VE <em>BUILT</em></h2>
+                </div>
+
+                <div class="showcase" id="showcase">
+                    <aside class="sc-left">
+                        <div class="sc-sticky" id="scSticky">
+                            <div class="sc-track" aria-hidden="true">
+                                <i class="sc-fill" id="scFill"></i>
+                                <span class="sc-node" id="scNode">p</span>
+                            </div>
+                            <div class="sc-info" id="scInfo"></div>
+                        </div>
+                    </aside>
+                    <div class="sc-right" id="scRight"></div>
+                </div>
+
+                <div class="sc-more reveal">
+                    <a href="https://github.com/mukkupundari?tab=repositories" target="_blank" rel="noopener">See more on GitHub <span>→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TOOLBOX / SKILLSET ============ -->
+        <section class="sec skills" id="toolbox">
+            <div class="sec-inner">
+                <div class="skills-orb reveal" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="sec-center reveal">
+                    <span class="kicker-c">MY SKILLSET</span>
+                    <h2 class="big-title">The Magic <em>Behind</em></h2>
+                </div>
+
+                <div class="skill-rows">
+                    <div class="skill-row reveal">
+                        <span class="skill"><img src="~/img/tech/csharp.svg" alt="" />C#</span>
+                        <span class="skill"><img src="~/img/tech/dotnet.svg" alt="" />.NET</span>
+                        <span class="skill"><img src="~/img/tech/dotnetcore.svg" alt="" />ASP.NET Core</span>
+                        <span class="skill"><svg><use href="#i-layers" /></svg>MVC</span>
+                        <span class="skill"><svg><use href="#i-api" /></svg>Web API</span>
+                        <span class="skill"><img src="~/img/tech/entityframework.svg" alt="" />Entity Framework</span>
+                        <span class="skill"><svg><use href="#i-shield" /></svg>BFF</span>
+                        <span class="skill"><img src="~/img/tech/swagger.svg" alt="" />Swagger</span>
+                    </div>
+                    <div class="skill-row reveal">
+                        <span class="skill"><img src="~/img/tech/angular.svg" alt="" />Angular 16+</span>
+                        <span class="skill"><img src="~/img/tech/typescript.svg" alt="" />TypeScript</span>
+                        <span class="skill"><img src="~/img/tech/javascript.svg" alt="" />JavaScript</span>
+                        <span class="skill"><img src="~/img/tech/html5.svg" alt="" />HTML5</span>
+                        <span class="skill"><img src="~/img/tech/css3.svg" alt="" />CSS3</span>
+                        <span class="skill"><img src="~/img/tech/bootstrap.svg" alt="" />Bootstrap</span>
+                        <span class="skill"><img src="~/img/tech/react.svg" alt="" />React</span>
+                    </div>
+                    <div class="skill-row reveal">
+                        <span class="skill"><img src="~/img/tech/sqlserver.svg" alt="" />SQL Server</span>
+                        <span class="skill"><img src="~/img/tech/oracle.svg" alt="" />Oracle</span>
+                        <span class="skill"><img src="~/img/tech/mysql.svg" alt="" />MySQL</span>
+                        <span class="skill"><svg><use href="#i-db" /></svg>Stored Procedures</span>
+                        <span class="skill"><svg><use href="#i-bolt" /></svg>Query Tuning</span>
+                        <span class="skill"><img src="~/img/tech/postman.svg" alt="" />Postman</span>
+                    </div>
+                    <div class="skill-row reveal">
+                        <span class="skill"><img src="~/img/tech/azure.svg" alt="" />Azure</span>
+                        <span class="skill"><img src="~/img/tech/azuredevops.svg" alt="" />Azure DevOps</span>
+                        <span class="skill"><svg><use href="#i-loop" /></svg>CI/CD</span>
+                        <span class="skill"><svg><use href="#i-server" /></svg>IIS</span>
+                        <span class="skill"><img src="~/img/tech/git.svg" alt="" />Git</span>
+                        <span class="skill"><img src="~/img/tech/github.svg" alt="" class="inv" />GitHub</span>
+                        <span class="skill"><img src="~/img/tech/sonarqube.svg" alt="" />SonarQube</span>
+                        <span class="skill"><img src="~/img/tech/jira.svg" alt="" />Jira</span>
+                        <span class="skill"><img src="~/img/tech/visualstudio.svg" alt="" />Visual Studio</span>
+                        <span class="skill"><svg><use href="#i-sprint" /></svg>Agile</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ JOURNEY (experience timeline) ============ -->
+        <section class="panel" id="journey">
+            <div class="panel-inner panel-deep">
+                <span class="kicker reveal">04 — journey</span>
+                <h2 class="reveal">Where I've <em>worked</em>.</h2>
+                <div class="journey-grid">
+                    <div class="timeline">
+                        <div class="tl-item tl-current reveal">
+                            <div class="tl-node"></div>
+                            <div class="tl-body">
+                                <div class="tl-head">
+                                    <h3>Safe Financial</h3>
+                                    <span class="tl-badge">current</span>
+                                </div>
+                                <span class="tl-role">Software Engineer · Feb 2026 → present</span>
+                                <p>Working on the Australian loan application ecosystem — developing and maintaining application features, investigating and resolving production issues, debugging complex loan workflows, and supporting deployments.</p>
+                                <div class="tl-chips">
+                                    <span>Azure</span><span>Azure DevOps</span><span>CI/CD</span><span>Git</span><span>.NET</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tl-item reveal">
+                            <div class="tl-node"></div>
+                            <div class="tl-body">
+                                <div class="tl-head"><h3>Abylle Solutions</h3></div>
+                                <span class="tl-role">Full-Stack Developer · Dec 2023 → Jan 2026</span>
+                                <p>Built tax and e-invoicing products end-to-end — APIs, Angular frontends, stored procedures, Azure and IIS deployments.</p>
+                            </div>
+                        </div>
+                        <div class="tl-item reveal">
+                            <div class="tl-node"></div>
+                            <div class="tl-body">
+                                <div class="tl-head"><h3>Palle Technologies</h3></div>
+                                <span class="tl-role">.NET Developer Intern · May 2023 → Nov 2023</span>
+                                <p>Full-stack .NET training; shipped the SkillGun student data portal.</p>
+                            </div>
+                        </div>
+                        <div class="tl-item tl-edu reveal">
+                            <div class="tl-node"></div>
+                            <div class="tl-body">
+                                <div class="tl-head"><h3>B.Tech, Mechanical Engineering</h3></div>
+                                <span class="tl-role">Bapatla Engineering College · 2019 → 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journey-stage reveal">
+                        <canvas id="arch3d"></canvas>
+                        <span class="stage-caption">ui · api · data — every layer, one engineer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ WORK WITH ME ============ -->
+        <section class="panel" id="services">
+            <div class="panel-inner">
+                <span class="kicker reveal">05 — work with me</span>
+                <h2 class="reveal">Something <em>broken</em>?<br />I find out why.</h2>
+                <div class="svc-grid">
+                    <div class="h-card reveal">
+                        <span class="h-icon">🐛</span>
+                        <h3>Bug hunting</h3>
+                        <p>Production issues in existing .NET codebases. I trace the root cause and fix it — no rewrite, no guesswork.</p>
+                    </div>
+                    <div class="h-card reveal">
+                        <span class="h-icon">⚡</span>
+                        <h3>Query tuning</h3>
+                        <p>Slow SQL Server or Oracle queries, timing-out reports, blocking procedures — profiled, indexed, brought back under control.</p>
+                    </div>
+                    <div class="h-card reveal">
+                        <span class="h-icon">🔌</span>
+                        <h3>API &amp; integration work</h3>
+                        <p>Web APIs and third-party integrations built or repaired in ASP.NET Core, with the tests to prove it works.</p>
+                    </div>
+                </div>
+                <p class="services-note reveal">Fixed-scope projects on evenings and weekends, typically one to three weeks. Tell me what's broken and I'll tell you what it takes to fix.</p>
+                <div class="services-cta reveal">
+                    <a href="#hello" class="btn btn-accent">start a project <span class="btn-arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SAY HI ============ -->
+        <section class="panel" id="hello">
+            <div class="panel-inner hello-inner">
+                <span class="kicker reveal">06 — say hi</span>
+                <h2 class="reveal">Got a product that needs<br />a <em>problem solver</em>?</h2>
+                <a class="hello-mail reveal" href="mailto:mukkupundari438@gmail.com">mukkupundari438@gmail.com <span>→</span></a>
+                <div class="hello-pills reveal">
+                    <a href="tel:+917993339804" class="pill">☏ +91 79933 39804</a>
+                    <a href="https://www.linkedin.com/in/pundari-mukku-0a1a6b226/" target="_blank" rel="noopener" class="pill">in / pundari-mukku</a>
+                    <span class="pill pill-accent">● available for freelance projects</span>
+                </div>
+                <div class="hello-social reveal">
+                    <a href="https://github.com/mukkupundari" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub" class="hs-github">
+                        <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.9-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z" /></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pundari-mukku-0a1a6b226/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" class="hs-linkedin">
+                        <svg viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#0A66C2" /><path fill="#ffffff" d="M6.94 8.5a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12zM5.6 18.5h2.68V9.75H5.6zM10 9.75h2.57v1.2h.04c.36-.68 1.23-1.4 2.54-1.4 2.72 0 3.22 1.79 3.22 4.11v4.84H15.7v-4.29c0-1.02-.02-2.34-1.43-2.34-1.43 0-1.65 1.12-1.65 2.27v4.36H10z" /></svg>
+                    </a>
+                    @* TODO: replace with your real X / Twitter profile URL *@
+                    <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X / Twitter" class="hs-x">
+                        <svg viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#000000" /><path fill="#ffffff" d="M16.1 5h2.3l-5 5.7L19.3 19h-4.6l-3.6-4.7L6.9 19H4.6l5.4-6.1L4.4 5h4.7l3.3 4.3L16.1 5zm-.8 12.6h1.3L8.1 6.3H6.7l8.6 11.3z" /></svg>
+                    </a>
+                    <a href="mailto:mukkupundari438@gmail.com" aria-label="Email" title="Email" class="hs-mail">
+                        <svg viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#ffffff" /><path fill="#4285F4" d="M4 9.2h3.2V18H5.1A1.1 1.1 0 0 1 4 16.9z" /><path fill="#34A853" d="M16.8 9.2H20v7.7a1.1 1.1 0 0 1-1.1 1.1h-2.1z" /><path fill="#FBBC04" d="M4 9.2V7.6c0-1.1 1.2-1.7 2.1-1.1l1.1.8v2.9z" /><path fill="#C5221F" d="M20 9.2V7.6c0-1.1-1.2-1.7-2.1-1.1l-1.1.8v2.9z" /><path fill="#EA4335" d="M7.2 7.3 12 10.9l4.8-3.6v3.4L12 14.3 7.2 10.7z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span>designed &amp; engineered by pundari · ASP.NET Core + Three.js</span>
+        </footer>
+    </main>
+
+    <!-- project modal -->
+    <div class="modal-backdrop" id="modalBackdrop">
+        <div class="modal" id="modal" role="dialog" aria-modal="true">
+            <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script type="module" src="~/js/scene.js" asp-append-version="true"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
+</body>
+</html>
